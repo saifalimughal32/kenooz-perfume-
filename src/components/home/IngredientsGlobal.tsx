@@ -51,7 +51,7 @@ const IngredientsGlobal = () => {
         </div>
 
         {/* RIGHT — Delivering Excellence Worldwide */}
-        <div className="relative bg-foreground text-background p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[480px]">
+        <div className="relative bg-foreground text-background p-6 sm:p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[380px] md:min-h-[480px]">
           <div
             aria-hidden
             className="absolute inset-0 opacity-30"
@@ -66,21 +66,21 @@ const IngredientsGlobal = () => {
             }}
           />
           <div className="relative max-w-md">
-            <span className="text-xs tracking-[0.3em] text-primary font-medium mb-4 block">
+            <span className="text-[11px] sm:text-xs tracking-[0.3em] text-primary font-medium mb-3 sm:mb-4 block">
               GLOBAL EXPORT
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-5">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl leading-tight mb-4 sm:mb-5">
               Delivering Excellence
               <br />
               Worldwide
             </h2>
-            <p className="text-sm md:text-base text-background/70 leading-relaxed mb-8">
+            <p className="text-sm md:text-base text-background/70 leading-relaxed mb-6 sm:mb-8">
               We proudly export our fragrances to clients across the globe with
               reliable logistics and flexible solutions.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 text-xs tracking-[0.25em] font-medium hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 sm:px-6 py-3 text-[11px] sm:text-xs tracking-[0.25em] font-medium hover:opacity-90 transition"
             >
               OUR GLOBAL PRESENCE <ArrowRight className="size-4" />
             </Link>
