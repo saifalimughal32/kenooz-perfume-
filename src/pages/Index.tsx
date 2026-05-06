@@ -1,6 +1,6 @@
 import SiteLayout from "@/components/layout/SiteLayout";
 import Hero from "@/components/home/Hero";
-import TrustBar from "@/components/home/TrustBar";
+import FeatureStrip from "@/components/home/FeatureStrip";
 import CapabilitiesPreview from "@/components/home/CapabilitiesPreview";
 import AboutTeaser from "@/components/home/AboutTeaser";
 import Process from "@/components/home/Process";
@@ -28,7 +28,7 @@ const Index = () => {
   return (
     <SiteLayout>
       <Hero />
-      <TrustBar />
+      <FeatureStrip />
       <CapabilitiesPreview />
       <AboutTeaser />
       <Process />
