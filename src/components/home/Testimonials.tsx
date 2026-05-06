@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
-import { Sparkles } from "@/components/ui/sparkles";
+import { SparklesCore as Sparkles } from "@/components/ui/sparkles";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 
 const testimonials = [
