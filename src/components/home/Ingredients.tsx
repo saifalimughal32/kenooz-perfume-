@@ -2,6 +2,10 @@ import { useState } from "react";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import oudImg from "@/assets/ingredient-oud.jpg";
 import lavenderImg from "@/assets/ingredient-lavender.jpg";
+import jasmineImg from "@/assets/ingredient-jasmine.jpg";
+import vanillaImg from "@/assets/ingredient-vanilla.jpg";
+import muskImg from "@/assets/ingredient-musk.jpg";
+import patchouliImg from "@/assets/ingredient-patchouli.jpg";
 import {
   Dialog,
   DialogContent,
@@ -82,9 +86,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Night-harvested jasmine sambac — intensely indolic, narcotic and luminous. The queen of white florals, layered into our most romantic accords.",
     photo: {
-      url: "https://images.unsplash.com/photo-1592978293352-9afac645d18a?w=900&auto=format&fit=crop&q=80",
+      url: jasmineImg,
       text: "White jasmine flowers",
-      by: "Unsplash",
+      by: "Kenooz",
     },
   },
   {
@@ -108,9 +112,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Cured Bourbon vanilla pods from Madagascar — sweet, balsamic and gourmand. The comforting backbone of countless modern luxury fragrances.",
     photo: {
-      url: "https://images.unsplash.com/photo-1611070960314-d96d33b9c08a?w=900&auto=format&fit=crop&q=80",
+      url: vanillaImg,
       text: "Vanilla pods",
-      by: "Unsplash",
+      by: "Kenooz",
     },
   },
   {
@@ -147,9 +151,9 @@ const ingredients: GalleryItem[] = [
     description:
       "A botanical musk extracted from ambrette seeds — soft, skin-like and pear-tinged. Our cruelty-free alternative to animal musks.",
     photo: {
-      url: "https://images.unsplash.com/photo-1599685315640-4a8f483e9819?w=900&auto=format&fit=crop&q=80",
+      url: muskImg,
       text: "Amber resin and seeds",
-      by: "Unsplash",
+      by: "Kenooz",
     },
   },
   {
@@ -160,9 +164,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Steam-distilled, long-aged patchouli — earthy, woody and slightly sweet. Adds depth and a magnetic, sensual trail to our chypres and orientals.",
     photo: {
-      url: "https://images.unsplash.com/photo-1603001120155-0e3a8b2cb2a1?w=900&auto=format&fit=crop&q=80",
+      url: patchouliImg,
       text: "Dried patchouli leaves",
-      by: "Unsplash",
+      by: "Kenooz",
     },
   },
   {
