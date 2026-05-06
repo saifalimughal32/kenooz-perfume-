@@ -108,11 +108,11 @@ const Testimonials = () => (
         <div className="relative h-44 w-full overflow-hidden">
           {/* sparkles backdrop */}
           <Sparkles
-            density={500}
-            speed={0.6}
-            size={1.4}
+           
+           
+           
             className="absolute inset-0 h-full w-full [mask-image:radial-gradient(60%_60%,white,transparent)]"
-            color="hsl(var(--primary))"
+           
           />
           {/* glow ring */}
           <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
