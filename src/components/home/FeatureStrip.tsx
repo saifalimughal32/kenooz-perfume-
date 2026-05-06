@@ -9,7 +9,7 @@ const features = [
 ];
 
 const FeatureStrip = () => (
-  <section className="bg-[hsl(30_10%_6%)] border-y border-primary/15">
+  <section className="bg-background border-y border-primary/15">
     <div className="container-luxury py-10 grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-8 divide-x divide-primary/15">
       {features.map(({ icon: Icon, label }, i) => (
         <div
@@ -17,7 +17,7 @@ const FeatureStrip = () => (
           className={`flex flex-col items-center text-center gap-3 px-4 ${i === 0 ? "border-l-0" : ""}`}
         >
           <Icon className="h-10 w-10 text-primary" strokeWidth={1.5} />
-          <p className="text-[11px] md:text-xs text-white/85 whitespace-pre-line tracking-[0.15em] font-medium leading-tight">
+          <p className="text-[11px] md:text-xs text-foreground/85 whitespace-pre-line tracking-[0.15em] font-medium leading-tight">
             {label}
           </p>
         </div>

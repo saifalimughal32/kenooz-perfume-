@@ -48,7 +48,7 @@ const Brands = () => {
             {brandDetails.map((b) => (
               <article
                 key={b.name}
-                className="p-8 border border-border bg-[hsl(30_10%_6%)] hover:border-primary/60 transition-colors"
+                className="p-8 border border-border bg-card hover:border-primary/60 transition-colors"
               >
                 <h2 className="font-serif text-2xl text-primary mb-3">{b.name}</h2>
                 <div className="h-px w-10 bg-primary/40 mb-4" />
