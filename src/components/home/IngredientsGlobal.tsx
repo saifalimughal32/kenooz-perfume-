@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import lavender from "@/assets/ingredient-lavender.jpg";
@@ -5,6 +6,12 @@ import rose from "@/assets/ingredient-rose.jpg";
 import oud from "@/assets/ingredient-oud.jpg";
 
 const IngredientsGlobal = () => {
+  const [active, setActive] = useState<string | null>(null);
+  const tiles = [
+    { key: "lavender", src: lavender, alt: "Lavender essential oil", label: "Lavender" },
+    { key: "rose", src: rose, alt: "Rose petals", label: "Rose" },
+    { key: "oud", src: oud, alt: "Oud wood chips", label: "Oud" },
+  ];
   return (
     <section className="bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
@@ -28,25 +35,39 @@ const IngredientsGlobal = () => {
               EXPLORE INGREDIENTS <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="group/strip grid grid-cols-3 h-64 md:h-full w-full overflow-hidden">
-            {[
-              { src: lavender, alt: "Lavender essential oil" },
-              { src: rose, alt: "Rose petals" },
-              { src: oud, alt: "Oud wood chips" },
-            ].map((img) => (
-              <div
-                key={img.alt}
-                className="relative overflow-hidden cursor-pointer group/tile"
-              >
-                {/* dim siblings on group hover, brighten the hovered one */}
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out scale-100 group-hover/tile:scale-110 brightness-100 group-hover/strip:brightness-50 group-hover/tile:!brightness-110"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          <div className="flex flex-row h-64 md:h-full w-full overflow-hidden">
+            {tiles.map((img) => {
+              const isActive = active === img.key;
+              const isDimmed = active !== null && !isActive;
+              return (
+                <button
+                  key={img.key}
+                  type="button"
+                  onClick={() => setActive(isActive ? null : img.key)}
+                  aria-label={img.label}
+                  aria-pressed={isActive}
+                  className={`relative overflow-hidden cursor-pointer transition-[flex] duration-700 ease-out focus:outline-none focus:ring-2 focus:ring-primary/60 ${
+                    isActive ? "flex-[3]" : isDimmed ? "flex-[0.6]" : "flex-1"
+                  }`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${
+                      isActive ? "scale-105 brightness-110" : isDimmed ? "scale-100 brightness-50" : "scale-100 brightness-100"
+                    }`}
+                    loading="lazy"
+                  />
+                  <div
+                    className={`absolute inset-x-0 bottom-0 p-3 sm:p-4 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-500 ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <p className="text-white font-serif text-lg sm:text-xl">{img.label}</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
 
