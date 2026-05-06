@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 
 const PageHeader = ({ title, breadcrumb }: { title: string; breadcrumb: string }) => (
   <section className="relative pt-12 pb-20 border-b border-border bg-muted">
