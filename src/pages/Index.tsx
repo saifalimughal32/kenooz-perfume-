@@ -32,13 +32,13 @@ const Index = () => {
       <CapabilitiesPreview />
       <AboutTeaser />
       <Process />
-      <IngredientsGlobal />
       <PartnersBar />
       <Brands />
       <Ingredients />
       <WhyKenooz />
       <Testimonials />
       <CtaBanner />
+      <IngredientsGlobal />
     </SiteLayout>
   );
 };
