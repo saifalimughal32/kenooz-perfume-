@@ -1,22 +1,23 @@
 import { Factory, Award, Tag, Globe, Headphones } from "lucide-react";
 
 const features = [
-  { icon: Factory, label: "Large Scale\nProduction" },
-  { icon: Award, label: "Premium\nQuality" },
-  { icon: Tag, label: "Private\nLabel" },
-  { icon: Globe, label: "Global\nSupply" },
-  { icon: Headphones, label: "Dedicated\nSupport" },
+  { icon: Factory, label: "LARGE SCALE\nPRODUCTION" },
+  { icon: Award, label: "PREMIUM\nQUALITY" },
+  { icon: Tag, label: "PRIVATE LABEL\nSOLUTIONS" },
+  { icon: Globe, label: "GLOBAL\nSUPPLY" },
+  { icon: Headphones, label: "DEDICATED\nSUPPORT" },
 ];
 
 const FeatureStrip = () => (
-  <section className="border-y border-border bg-muted">
-    <div className="container-luxury py-10 grid grid-cols-2 md:grid-cols-5 gap-8">
-      {features.map(({ icon: Icon, label }) => (
-        <div key={label} className="flex flex-col items-center text-center gap-3">
-          <div className="h-14 w-14 border border-primary/40 rounded-full flex items-center justify-center">
-            <Icon className="h-6 w-6 text-primary" />
-          </div>
-          <p className="text-xs md:text-sm text-foreground/80 whitespace-pre-line tracking-wide">
+  <section className="bg-[hsl(30_10%_6%)] border-y border-primary/15">
+    <div className="container-luxury py-10 grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-8 divide-x divide-primary/15">
+      {features.map(({ icon: Icon, label }, i) => (
+        <div
+          key={label}
+          className={`flex flex-col items-center text-center gap-3 px-4 ${i === 0 ? "border-l-0" : ""}`}
+        >
+          <Icon className="h-10 w-10 text-primary" strokeWidth={1.5} />
+          <p className="text-[11px] md:text-xs text-white/85 whitespace-pre-line tracking-[0.15em] font-medium leading-tight">
             {label}
           </p>
         </div>
