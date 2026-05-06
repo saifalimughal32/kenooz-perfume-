@@ -4,7 +4,7 @@ import FeatureStrip from "@/components/home/FeatureStrip";
 import CapabilitiesPreview from "@/components/home/CapabilitiesPreview";
 import AboutTeaser from "@/components/home/AboutTeaser";
 import Process from "@/components/home/Process";
-import CertificationsWall from "@/components/home/CertificationsWall";
+import IngredientsGlobal from "@/components/home/IngredientsGlobal";
 import PartnersBar from "@/components/home/PartnersBar";
 import Brands from "@/components/home/Brands";
 import Ingredients from "@/components/home/Ingredients";
@@ -32,7 +32,7 @@ const Index = () => {
       <CapabilitiesPreview />
       <AboutTeaser />
       <Process />
-      <CertificationsWall />
+      <IngredientsGlobal />
       <PartnersBar />
       <Brands />
       <Ingredients />
