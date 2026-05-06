@@ -1,5 +1,6 @@
 import { Award, Users, UserCheck, Globe2, ShieldCheck } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { icon: Award, value: 15, suffix: "+", label: "Years of\nExperience" },
@@ -10,12 +11,20 @@ const stats = [
 ];
 
 const StatItem = ({ icon: Icon, value, suffix, label, delay }: typeof stats[number] & { delay: number }) => {
-  const { ref, value: v } = useCountUp(value);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [start, setStart] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && setStart(true)), { threshold: 0.3 });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, []);
+  const v = useCountUp(value, 1800, start);
   return (
-    <div className="reveal flex flex-col items-center text-center gap-2 hover-lift" data-reveal-delay={delay}>
+    <div ref={ref} className="reveal flex flex-col items-center text-center gap-2 hover-lift" data-reveal-delay={delay}>
       <Icon className="h-8 w-8 text-primary mb-1 transition-transform duration-500 hover:rotate-12 hover:scale-110" />
       <div className="font-serif text-3xl text-foreground">
-        <span ref={ref}>{v.toLocaleString()}</span>
+        <span>{v.toLocaleString()}</span>
         <span className="text-primary">{suffix}</span>
       </div>
       <p className="text-[10px] tracking-[0.2em] uppercase opacity-70 whitespace-pre-line">{label}</p>

@@ -1,5 +1,6 @@
 import { useCountUp } from "@/hooks/useCountUp";
 import { Calendar, Factory, Globe2, Package } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { icon: Calendar, value: 15, suffix: "+", label: "Years Manufacturing" },
@@ -9,12 +10,20 @@ const stats = [
 ];
 
 const Item = ({ icon: Icon, value, suffix, label }: typeof stats[number]) => {
-  const { ref, value: v } = useCountUp(value);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [start, setStart] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && setStart(true)), { threshold: 0.3 });
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, []);
+  const v = useCountUp(value, 1800, start);
   return (
-    <div className="flex flex-col items-center text-center px-2">
+    <div ref={ref} className="flex flex-col items-center text-center px-2">
       <Icon className="h-6 w-6 text-primary mb-3" />
       <div className="font-serif text-3xl md:text-4xl text-foreground leading-none">
-        <span ref={ref}>{v.toLocaleString()}</span>
+        <span>{v.toLocaleString()}</span>
         <span className="text-primary">{suffix}</span>
       </div>
       <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">

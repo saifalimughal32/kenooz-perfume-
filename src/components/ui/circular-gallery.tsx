@@ -139,7 +139,7 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
                 }}
               >
                 <button
-                  ref={(el) => (cardRefs.current[i] = el)}
+                  ref={(el) => { cardRefs.current[i] = el; }}
                   type="button"
                   aria-label={`View details for ${item.common}`}
                   onMouseEnter={() => (isHoveringRef.current = true)}
