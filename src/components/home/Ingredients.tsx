@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import oudImg from "@/assets/ingredient-oud.jpg";
+import lavenderImg from "@/assets/ingredient-lavender.jpg";
 import {
   Dialog,
   DialogContent,
