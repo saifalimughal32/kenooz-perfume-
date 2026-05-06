@@ -11,7 +11,7 @@ const tiers = [
   {
     icon: Sparkles,
     name: "Standard White Label",
-    moq: "500 units",
+    moq: "5,000 units",
     leadTime: "30–45 days",
     description: "Choose from our existing fragrance library and bottle range. Apply your brand label and launch fast.",
     features: [
@@ -25,7 +25,7 @@ const tiers = [
   {
     icon: Crown,
     name: "Custom Private Label",
-    moq: "1,000 units",
+    moq: "10,000 units",
     leadTime: "60–75 days",
     description: "Customise an existing fragrance, choose bespoke bottles, design unique packaging — your full brand identity.",
     features: [
@@ -40,9 +40,9 @@ const tiers = [
   {
     icon: Beaker,
     name: "Full Bespoke Development",
-    moq: "3,000 units",
+    moq: "40,000 units (no upper limit)",
     leadTime: "90–120 days",
-    description: "Brief our perfumers from scratch. Develop a signature fragrance and complete brand world unique to you.",
+    description: "Brief our perfumers from scratch. Develop a signature fragrance and complete brand world unique to you. Scale as high as you need — no maximum.",
     features: [
       "From-scratch fragrance creation",
       "Dedicated perfumer team",
@@ -78,7 +78,7 @@ const PrivateLabel = () => {
       document.head.appendChild(m);
       return m;
     })();
-    meta.setAttribute("content", "Launch your own perfume brand with Kenooz UAE. White label, private label & full bespoke development. MOQ from 500 units. ISO 22716 certified.");
+    meta.setAttribute("content", "Launch your own perfume brand with Kenooz UAE. White label, private label & full bespoke development. MOQ from 5,000 units — scale up with no upper limit. ISO 22716 certified.");
   }, []);
 
   return (
