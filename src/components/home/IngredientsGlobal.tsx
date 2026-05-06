@@ -28,10 +28,24 @@ const IngredientsGlobal = () => {
               EXPLORE INGREDIENTS <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-3 h-64 md:h-auto">
-            <img src={lavender} alt="Lavender essential oil" className="w-full h-full object-cover" />
-            <img src={rose} alt="Rose petals" className="w-full h-full object-cover" />
-            <img src={oud} alt="Oud wood chips" className="w-full h-full object-cover" />
+          <div className="group/strip flex flex-row h-64 md:h-auto md:min-h-[420px] overflow-hidden">
+            {[
+              { src: lavender, alt: "Lavender essential oil" },
+              { src: rose, alt: "Rose petals" },
+              { src: oud, alt: "Oud wood chips" },
+            ].map((img) => (
+              <div
+                key={img.alt}
+                className="relative flex-1 hover:flex-[3] transition-all duration-700 ease-out overflow-hidden cursor-pointer"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover/strip:scale-100"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
