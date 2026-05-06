@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./CinematicFooter";
 import ChatBot from "./ChatBot";
 import ScrollBottle from "./ScrollBottle";
+import AlSyediBadge from "./AlSyediBadge";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const SiteLayout = ({ children }: { children: React.ReactNode }) => {
@@ -29,6 +30,7 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-1 pt-20">{children}</main>
       <Footer />
       <ChatBot />
+      <AlSyediBadge />
       <ScrollBottle />
     </div>
   );
