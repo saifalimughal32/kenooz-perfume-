@@ -3,17 +3,17 @@ import { ArrowRight } from "lucide-react";
 import heroBottle from "@/assets/hero-bottle.jpg";
 
 const Hero = () => (
-  <section className="relative bg-[hsl(30_10%_6%)] text-[hsl(40_30%_92%)] overflow-hidden">
-    {/* Background image — subtle factory/bottles, very dark */}
+  <section className="relative bg-background text-foreground overflow-hidden">
+    {/* Background image — subtle factory/bottles */}
     <div className="absolute inset-0">
       <img
         src={heroBottle}
         alt=""
         aria-hidden="true"
-        className="w-full h-full object-cover opacity-40"
+        className="w-full h-full object-cover opacity-30 dark:opacity-40"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30_10%_4%)] via-[hsl(30_10%_4%)/0.85] to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(30_10%_4%)/0.4] via-transparent to-[hsl(30_10%_4%)/0.6]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
     </div>
 
     <div className="container-luxury relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[88vh] py-20">
@@ -22,12 +22,12 @@ const Hero = () => (
         <p className="label-gold mb-6 animate-fade-in">PREMIUM FRAGRANCE MANUFACTURER</p>
 
         <h1 className="font-serif font-bold leading-[1.05] tracking-tight text-4xl sm:text-5xl lg:text-6xl mb-6">
-          <span className="block text-white">BULK PERFUME</span>
-          <span className="block text-white">MANUFACTURING &amp;</span>
+          <span className="block text-foreground">BULK PERFUME</span>
+          <span className="block text-foreground">MANUFACTURING &amp;</span>
           <span className="block text-primary">WHOLESALE SUPPLY</span>
         </h1>
 
-        <p className="text-base md:text-lg text-white/75 leading-relaxed mb-10 max-w-lg">
+        <p className="text-base md:text-lg text-foreground/75 leading-relaxed mb-10 max-w-lg">
           We are a trusted perfume manufacturer and wholesaler, delivering
           high-quality fragrances in bulk for brands, distributors and private
           label businesses worldwide.
@@ -43,7 +43,7 @@ const Hero = () => (
           </Link>
           <Link
             to="/products"
-            className="inline-flex items-center justify-center border border-white/40 text-white hover:bg-white/10 px-8 h-12 text-xs tracking-[0.2em] font-semibold uppercase transition-colors"
+            className="inline-flex items-center justify-center border border-foreground/40 text-foreground hover:bg-foreground/10 px-8 h-12 text-xs tracking-[0.2em] font-semibold uppercase transition-colors"
           >
             View Products
           </Link>

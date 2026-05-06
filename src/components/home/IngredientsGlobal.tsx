@@ -9,7 +9,7 @@ const IngredientsGlobal = () => {
     <section className="bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* LEFT — Naturally Sourced */}
-        <div className="bg-[hsl(40_30%_96%)] text-[hsl(30_15%_12%)] grid grid-cols-1 md:grid-cols-2">
+        <div className="bg-secondary text-secondary-foreground grid grid-cols-1 md:grid-cols-2">
           <div className="p-10 md:p-14 flex flex-col justify-center">
             <span className="text-xs tracking-[0.3em] text-primary font-medium mb-4">
               FINEST INGREDIENTS
@@ -17,7 +17,7 @@ const IngredientsGlobal = () => {
             <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-5">
               Naturally Sourced
             </h2>
-            <p className="text-sm md:text-base text-[hsl(30_10%_30%)] leading-relaxed mb-8 max-w-md">
+            <p className="text-sm md:text-base text-secondary-foreground/70 leading-relaxed mb-8 max-w-md">
               We use high-quality natural essential oils and aromatic compounds,
               sourced from the best farms around the world.
             </p>
@@ -36,7 +36,7 @@ const IngredientsGlobal = () => {
         </div>
 
         {/* RIGHT — Delivering Excellence Worldwide */}
-        <div className="relative bg-[hsl(30_15%_8%)] text-foreground p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[380px]">
+        <div className="relative bg-foreground text-background p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[380px]">
           {/* Dotted world-map backdrop */}
           <div
             aria-hidden
@@ -60,7 +60,7 @@ const IngredientsGlobal = () => {
               <br />
               Worldwide
             </h2>
-            <p className="text-sm md:text-base text-foreground/70 leading-relaxed mb-8">
+            <p className="text-sm md:text-base text-background/70 leading-relaxed mb-8">
               We proudly export our fragrances to clients across the globe with
               reliable logistics and flexible solutions.
             </p>
