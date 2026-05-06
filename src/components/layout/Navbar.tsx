@@ -111,15 +111,30 @@ const menu: MenuItem[] = [
   { title: "Contact", url: "/contact" },
 ];
 
+import kenoozLogoDark from "@/assets/kenooz-logo-dark.png";
+import kenoozLogoLight from "@/assets/kenooz-logo-light.png";
+
 const Logo = () => (
-  <Link to="/" className="flex items-center gap-3 shrink-0">
-    <div className="h-10 w-10 rounded-full border border-primary flex items-center justify-center">
-      <span className="font-serif text-primary text-lg">K</span>
-    </div>
-    <div className="leading-none">
-      <div className="font-serif text-lg tracking-widest text-foreground">KENOOZ</div>
-      <div className="text-[9px] tracking-[0.3em] text-primary mt-0.5">PERFUMES & COSMETICS LLC</div>
-    </div>
+  <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
+    {/* Dark-bg logo (default on dark navbar) */}
+    <img
+      src={kenoozLogoDark}
+      alt="Kenooz Perfume and Cosmetics LLC"
+      className="h-12 md:h-14 w-auto object-contain block dark:block"
+      loading="eager"
+    />
+  </Link>
+);
+
+// Light-bg variant exported for use in light sections (e.g., light footer)
+export const LogoLight = () => (
+  <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
+    <img
+      src={kenoozLogoLight}
+      alt="Kenooz Perfume and Cosmetics LLC"
+      className="h-12 md:h-14 w-auto object-contain"
+      loading="eager"
+    />
   </Link>
 );
 
