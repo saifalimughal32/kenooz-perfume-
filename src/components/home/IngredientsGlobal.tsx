@@ -28,7 +28,7 @@ const IngredientsGlobal = () => {
               EXPLORE INGREDIENTS <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="flex flex-row h-64 md:h-full w-full overflow-hidden">
+          <div className="group/strip grid grid-cols-3 h-64 md:h-full w-full overflow-hidden">
             {[
               { src: lavender, alt: "Lavender essential oil" },
               { src: rose, alt: "Rose petals" },
@@ -36,12 +36,13 @@ const IngredientsGlobal = () => {
             ].map((img) => (
               <div
                 key={img.alt}
-                className="relative flex-1 hover:flex-[3] transition-all duration-700 ease-out overflow-hidden cursor-pointer"
+                className="relative overflow-hidden cursor-pointer group/tile"
               >
+                {/* dim siblings on group hover, brighten the hovered one */}
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out scale-100 group-hover/tile:scale-110 brightness-100 group-hover/strip:brightness-50 group-hover/tile:!brightness-110"
                   loading="lazy"
                 />
               </div>
