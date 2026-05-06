@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import oudImg from "@/assets/ingredient-oud.jpg";
+import lavenderImg from "@/assets/ingredient-lavender.jpg";
 import {
   Dialog,
   DialogContent,
@@ -40,9 +42,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Aged agarwood resin — the legendary 'liquid gold' of the Middle East. Smoky, animalic and deeply spiritual, oud lends our compositions their unmistakable signature.",
     photo: {
-      url: "https://images.unsplash.com/photo-1610385537067-839f9ddca90f?w=900&auto=format&fit=crop&q=80",
+      url: oudImg,
       text: "Aged agarwood chips",
-      by: "Karim MANJRA",
+      by: "Kenooz",
     },
   },
   {
@@ -53,10 +55,10 @@ const ingredients: GalleryItem[] = [
     description:
       "Sun-drenched lavender from Haute-Provence — clean, herbaceous and softly floral. A timeless aromatic that brings calm and clarity to fougère compositions.",
     photo: {
-      url: "https://images.unsplash.com/photo-1498998530138-46c84d09f249?w=900&auto=format&fit=crop&q=80",
+      url: lavenderImg,
       text: "Lavender field in Provence",
       pos: "50% 60%",
-      by: "Léonard Cotte",
+      by: "Kenooz",
     },
   },
   {
@@ -67,9 +69,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Creamy, milky and meditative — Mysore sandalwood is sustainably sourced and matured for years to develop its signature buttery softness and lasting depth.",
     photo: {
-      url: "https://images.unsplash.com/photo-1611117775350-ac3950990985?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1602928321679-560bb453f190?w=900&auto=format&fit=crop&q=80",
       text: "Sandalwood timber",
-      by: "Karim MANJRA",
+      by: "Unsplash",
     },
   },
   {
@@ -80,9 +82,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Night-harvested jasmine sambac — intensely indolic, narcotic and luminous. The queen of white florals, layered into our most romantic accords.",
     photo: {
-      url: "https://images.unsplash.com/photo-1567186937675-a5131c8a89ea?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1592978293352-9afac645d18a?w=900&auto=format&fit=crop&q=80",
       text: "White jasmine flowers",
-      by: "Vino Li",
+      by: "Unsplash",
     },
   },
   {
@@ -93,9 +95,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Hand-collected saffron threads — leathery, honeyed and subtly metallic. A precious spice that adds warmth and oriental opulence to our oud compositions.",
     photo: {
-      url: "https://images.unsplash.com/photo-1599909533483-cb14a32a8c2c?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?w=900&auto=format&fit=crop&q=80",
       text: "Saffron threads",
-      by: "Mohammad Amiri",
+      by: "Unsplash",
     },
   },
   {
@@ -106,9 +108,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Cured Bourbon vanilla pods from Madagascar — sweet, balsamic and gourmand. The comforting backbone of countless modern luxury fragrances.",
     photo: {
-      url: "https://images.unsplash.com/photo-1631208400917-2ddc3a4d2a8b?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1611070960314-d96d33b9c08a?w=900&auto=format&fit=crop&q=80",
       text: "Vanilla pods",
-      by: "Joanna Stołowicz",
+      by: "Unsplash",
     },
   },
   {
@@ -119,9 +121,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Cold-pressed bergamot peel from Calabria — sparkling, slightly bitter and elegantly green. The brightest opening note in the perfumer's palette.",
     photo: {
-      url: "https://images.unsplash.com/photo-1591868099672-2b6a47e93f5f?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?w=900&auto=format&fit=crop&q=80",
       text: "Citrus bergamot fruit",
-      by: "Hans Vivek",
+      by: "Unsplash",
     },
   },
   {
@@ -132,9 +134,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Sacred resin tapped by hand from wild Boswellia trees — smoky, lemony and ethereal. A spiritual ingredient woven through millennia of Arabian perfumery.",
     photo: {
-      url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=900&auto=format&fit=crop&q=80",
       text: "Frankincense resin",
-      by: "Calvin Ma",
+      by: "Unsplash",
     },
   },
   {
@@ -145,9 +147,9 @@ const ingredients: GalleryItem[] = [
     description:
       "A botanical musk extracted from ambrette seeds — soft, skin-like and pear-tinged. Our cruelty-free alternative to animal musks.",
     photo: {
-      url: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1599685315640-4a8f483e9819?w=900&auto=format&fit=crop&q=80",
       text: "Amber resin and seeds",
-      by: "Lucija Ros",
+      by: "Unsplash",
     },
   },
   {
@@ -158,9 +160,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Steam-distilled, long-aged patchouli — earthy, woody and slightly sweet. Adds depth and a magnetic, sensual trail to our chypres and orientals.",
     photo: {
-      url: "https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=900&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1603001120155-0e3a8b2cb2a1?w=900&auto=format&fit=crop&q=80",
       text: "Dried patchouli leaves",
-      by: "engin akyurt",
+      by: "Unsplash",
     },
   },
   {
