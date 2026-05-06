@@ -116,23 +116,18 @@ import kenoozLogoLight from "@/assets/kenooz-logo-light.png";
 
 const Logo = () => (
   <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
-    {/* Dark-bg logo (default on dark navbar) */}
+    {/* Shown in light theme (logo has dark bg) */}
     <img
       src={kenoozLogoDark}
       alt="Kenooz Perfume and Cosmetics LLC"
-      className="h-12 md:h-14 w-auto object-contain block dark:block"
+      className="h-12 md:h-14 w-auto object-contain block dark:hidden"
       loading="eager"
     />
-  </Link>
-);
-
-// Light-bg variant exported for use in light sections (e.g., light footer)
-export const LogoLight = () => (
-  <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
+    {/* Shown in dark theme (logo has light/transparent bg) */}
     <img
       src={kenoozLogoLight}
       alt="Kenooz Perfume and Cosmetics LLC"
-      className="h-12 md:h-14 w-auto object-contain"
+      className="h-12 md:h-14 w-auto object-contain hidden dark:block"
       loading="eager"
     />
   </Link>
