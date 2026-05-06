@@ -116,23 +116,21 @@ import kenoozLogoLight from "@/assets/kenooz-logo-light.png";
 
 const Logo = () => (
   <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
-    {/* Light theme → dark-bg logo */}
     <img
       src={kenoozLogoDark}
       alt="Kenooz Perfume and Cosmetics LLC"
       width={220}
       height={88}
-      className="h-16 md:h-20 w-auto object-contain block dark:hidden"
+      className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain block dark:hidden"
       loading="eager"
       decoding="async"
     />
-    {/* Dark theme → light/transparent-bg logo */}
     <img
       src={kenoozLogoLight}
       alt="Kenooz Perfume and Cosmetics LLC"
       width={220}
       height={88}
-      className="h-16 md:h-20 w-auto object-contain hidden dark:block"
+      className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain hidden dark:block"
       loading="eager"
       decoding="async"
     />
