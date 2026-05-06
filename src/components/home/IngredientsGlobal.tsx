@@ -7,9 +7,9 @@ import oud from "@/assets/ingredient-oud.jpg";
 const IngredientsGlobal = () => {
   return (
     <section className="bg-background">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
         {/* LEFT — Naturally Sourced */}
-        <div className="bg-secondary text-secondary-foreground grid grid-cols-1 md:grid-cols-2">
+        <div className="bg-secondary text-secondary-foreground grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
           <div className="p-10 md:p-14 flex flex-col justify-center">
             <span className="text-xs tracking-[0.3em] text-primary font-medium mb-4">
               FINEST INGREDIENTS
@@ -28,7 +28,7 @@ const IngredientsGlobal = () => {
               EXPLORE INGREDIENTS <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="group/strip flex flex-row h-64 md:h-auto md:min-h-[420px] overflow-hidden">
+          <div className="flex flex-row h-64 md:h-full w-full overflow-hidden">
             {[
               { src: lavender, alt: "Lavender essential oil" },
               { src: rose, alt: "Rose petals" },
@@ -41,7 +41,7 @@ const IngredientsGlobal = () => {
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover/strip:scale-100"
+                  className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
@@ -50,8 +50,7 @@ const IngredientsGlobal = () => {
         </div>
 
         {/* RIGHT — Delivering Excellence Worldwide */}
-        <div className="relative bg-foreground text-background p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[380px]">
-          {/* Dotted world-map backdrop */}
+        <div className="relative bg-foreground text-background p-10 md:p-14 flex flex-col justify-center overflow-hidden min-h-[480px]">
           <div
             aria-hidden
             className="absolute inset-0 opacity-30"
