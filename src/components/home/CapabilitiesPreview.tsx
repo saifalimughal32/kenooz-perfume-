@@ -10,7 +10,7 @@ const capabilities = [
   {
     icon: Factory,
     title: "Bulk Manufacturing",
-    description: "High-volume perfume production with consistent quality. MOQ from 500 units.",
+    description: "High-volume perfume production with consistent quality. MOQ from 5,000 units — scale with no upper limit.",
     href: "/manufacturing",
   },
   {
