@@ -39,6 +39,7 @@ const IngredientsGlobal = () => {
             {tiles.map((img) => {
               const isActive = active === img.key;
               const isDimmed = active !== null && !isActive;
+              const grow = isActive ? 4 : isDimmed ? 0.6 : 1;
               return (
                 <button
                   key={img.key}
@@ -46,9 +47,12 @@ const IngredientsGlobal = () => {
                   onClick={() => setActive(isActive ? null : img.key)}
                   aria-label={img.label}
                   aria-pressed={isActive}
-                  className={`relative overflow-hidden cursor-pointer transition-[flex] duration-700 ease-out focus:outline-none focus:ring-2 focus:ring-primary/60 ${
-                    isActive ? "flex-[3]" : isDimmed ? "flex-[0.6]" : "flex-1"
-                  }`}
+                  style={{
+                    flexGrow: grow,
+                    flexBasis: 0,
+                    transition: "flex-grow 700ms cubic-bezier(0.22, 1, 0.36, 1)",
+                  }}
+                  className="relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/60 min-w-0"
                 >
                   <img
                     src={img.src}
