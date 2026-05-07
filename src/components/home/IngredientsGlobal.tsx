@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import lavender from "@/assets/ingredient-lavender.jpg";
 import rose from "@/assets/ingredient-rose.jpg";

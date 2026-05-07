@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Factory, Tag, FlaskConical, Package, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";

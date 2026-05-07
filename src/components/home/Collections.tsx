@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import oud from "@/assets/collection-oud.jpg";
 import floral from "@/assets/collection-floral.jpg";
