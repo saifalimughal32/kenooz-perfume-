@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./styles.css";
 
@@ -18,8 +17,7 @@ import NotFound from "@/pages/NotFound";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <ThemeProvider
+    <ThemeProvider
         attribute="class"
         defaultTheme="dark"
         enableSystem
