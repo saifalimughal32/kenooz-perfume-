@@ -1,8 +1,8 @@
-import { Link, type LinkProps } from "react-router-dom";
+import { NavLink as RRNavLink, type NavLinkProps } from "react-router-dom";
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
-interface NavLinkCompatProps extends Omit<LinkProps, "className"> {
+interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
   className?: string;
   activeClassName?: string;
   pendingClassName?: string;
@@ -11,12 +11,12 @@ interface NavLinkCompatProps extends Omit<LinkProps, "className"> {
 const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
   ({ className, activeClassName, pendingClassName, ...props }, ref) => {
     return (
-      <Link
+      <RRNavLink
         ref={ref}
-        {...(props as LinkProps)}
-        className={cn(className)}
-        activeProps={{ className: cn(activeClassName) }}
-        inactiveProps={{ className: cn(pendingClassName) }}
+        {...props}
+        className={({ isActive, isPending }) =>
+          cn(className, isActive && activeClassName, isPending && pendingClassName)
+        }
       />
     );
   },
