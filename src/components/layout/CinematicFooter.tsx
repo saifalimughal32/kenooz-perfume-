@@ -166,14 +166,8 @@ const CinematicFooter = () => {
           <div ref={linksRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-border">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center gap-3 mb-5">
-                <div className="h-10 w-10 rounded-full border border-primary flex items-center justify-center">
-                  <span className="font-serif text-primary">K</span>
-                </div>
-                <div>
-                  <div className="font-serif tracking-widest">KENOOZ</div>
-                  <div className="text-[9px] tracking-[0.3em] text-primary mt-0.5">PERFUMES & COSMETICS LLC</div>
-                </div>
+              <Link to="/" className="inline-flex items-center mb-5">
+                <img src={kenoozLogo} alt="Kenooz Perfumes & Cosmetics LLC" width={180} height={144} className="h-20 w-auto object-contain" loading="lazy" />
               </Link>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5 max-w-sm">
                 ISO 22716 certified perfume manufacturer based in the UAE. Trusted by 200+ brands across 50+ countries for bulk supply, private label and custom fragrance development.
