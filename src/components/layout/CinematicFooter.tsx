@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import kenoozLogo from "@/assets/kenooz-logo.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
