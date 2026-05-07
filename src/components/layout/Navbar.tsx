@@ -111,26 +111,16 @@ const menu: MenuItem[] = [
   { title: "Contact", url: "/contact" },
 ];
 
-import kenoozLogoDark from "@/assets/kenooz-logo-dark.png";
-import kenoozLogoLight from "@/assets/kenooz-logo-light.png";
+import kenoozLogo from "@/assets/kenooz-logo.png";
 
 const Logo = () => (
   <Link to="/" className="flex items-center shrink-0" aria-label="Kenooz Perfume and Cosmetics LLC">
     <img
-      src={kenoozLogoDark}
+      src={kenoozLogo}
       alt="Kenooz Perfume and Cosmetics LLC"
       width={220}
-      height={88}
-      className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain block dark:hidden"
-      loading="eager"
-      decoding="async"
-    />
-    <img
-      src={kenoozLogoLight}
-      alt="Kenooz Perfume and Cosmetics LLC"
-      width={220}
-      height={88}
-      className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain hidden dark:block"
+      height={176}
+      className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain"
       loading="eager"
       decoding="async"
     />
