@@ -39,6 +39,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
-    </HelmetProvider>
   </React.StrictMode>
 );
