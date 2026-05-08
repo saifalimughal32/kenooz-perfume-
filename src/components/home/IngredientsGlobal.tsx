@@ -35,7 +35,10 @@ const IngredientsGlobal = () => {
               EXPLORE INGREDIENTS <ArrowRight className="size-4" />
             </Link>
           </div>
-          <div className="flex flex-row h-64 md:h-full w-full overflow-hidden">
+          <div
+            className="flex flex-row h-64 md:h-full w-full overflow-hidden"
+            onMouseLeave={() => setActive(null)}
+          >
             {tiles.map((img) => {
               const isActive = active === img.key;
               const isDimmed = active !== null && !isActive;
@@ -44,7 +47,9 @@ const IngredientsGlobal = () => {
                 <button
                   key={img.key}
                   type="button"
-                  onClick={() => setActive(isActive ? null : img.key)}
+                  onMouseEnter={() => setActive(img.key)}
+                  onFocus={() => setActive(img.key)}
+                  onBlur={() => setActive(null)}
                   aria-label={img.label}
                   aria-pressed={isActive}
                   style={{
