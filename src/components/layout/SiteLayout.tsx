@@ -5,6 +5,7 @@ import Footer from "./CinematicFooter";
 import ChatBot from "./ChatBot";
 import ScrollBottle from "./ScrollBottle";
 import AlSyediBadge from "./AlSyediBadge";
+import TilesBadge from "./TilesBadge";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const SiteLayout = ({ children }: { children: React.ReactNode }) => {
