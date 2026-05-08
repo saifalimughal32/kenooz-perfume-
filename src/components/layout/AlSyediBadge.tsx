@@ -13,7 +13,14 @@ const AlSyediBadge = () => {
       <img
         src={alSyediLogo}
         alt="Al-Syedi"
-        className="h-20 w-20 text-center object-fill"
+        className="object-contain"
+        style={{
+          height: "calc(var(--spacing) * 30)",
+          width: "calc(var(--spacing) * 30)",
+          alignItems: "center",
+          paddingBottom: "15px",
+          paddingRight: "11px",
+        }}
         loading="lazy"
       />
       <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded bg-foreground text-background text-[11px] tracking-wider uppercase font-medium px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
