@@ -261,7 +261,7 @@ const ScentFinder = () => {
                         ))}
                       </div>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-wrap gap-3">
                       <Button
                         asChild
                         className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-none tracking-[0.2em] text-xs font-semibold px-6 py-5"
