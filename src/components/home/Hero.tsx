@@ -1,21 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import heroBottle from "@/assets/hero-bottle.jpg";
+import heroBottle from "@/assets/hero-kenooz-bottle.png";
 
 const Hero = () => (
-  <section className="relative bg-background text-foreground overflow-hidden">
-    {/* Background image — subtle factory/bottles */}
-    <div className="absolute inset-0">
-      <img
-        src={heroBottle}
-        alt=""
-        aria-hidden="true"
-        className="w-full h-full object-cover opacity-30 dark:opacity-40"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
-    </div>
-
+  <section className="relative bg-black text-foreground overflow-hidden">
     <div className="container-luxury relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center min-h-[88vh] pt-28 pb-16 md:py-20">
       {/* Left — copy */}
       <div className="max-w-xl">
@@ -54,8 +42,8 @@ const Hero = () => (
       <div className="relative hidden lg:block">
         <img
           src={heroBottle}
-          alt="Premium luxury Kenooz perfume bottle with gold cap"
-          className="w-full h-auto max-h-[640px] object-cover shadow-2xl"
+          alt="Kenooz Extrait de Parfum luxury perfume bottle"
+          className="w-full h-auto max-h-[640px] object-contain"
         />
       </div>
     </div>
