@@ -6,6 +6,7 @@ import jasmineImg from "@/assets/ingredient-jasmine.jpg";
 import vanillaImg from "@/assets/ingredient-vanilla.jpg";
 import muskImg from "@/assets/ingredient-musk.jpg";
 import patchouliImg from "@/assets/ingredient-patchouli.jpg";
+import saffronImg from "@/assets/saffron.png";
 import {
   Dialog,
   DialogContent,
