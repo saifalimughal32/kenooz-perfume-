@@ -6,6 +6,7 @@ import jasmineImg from "@/assets/ingredient-jasmine.jpg";
 import vanillaImg from "@/assets/ingredient-vanilla.jpg";
 import muskImg from "@/assets/ingredient-musk.jpg";
 import patchouliImg from "@/assets/ingredient-patchouli.jpg";
+import saffronImg from "@/assets/saffron.png";
 import {
   Dialog,
   DialogContent,
@@ -99,9 +100,9 @@ const ingredients: GalleryItem[] = [
     description:
       "Hand-collected saffron threads — leathery, honeyed and subtly metallic. A precious spice that adds warmth and oriental opulence to our oud compositions.",
     photo: {
-      url: "https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?w=900&auto=format&fit=crop&q=80",
+      url: saffronImg,
       text: "Saffron threads",
-      by: "Unsplash",
+      by: "Kenooz",
     },
   },
   {
