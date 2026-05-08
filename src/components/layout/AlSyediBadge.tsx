@@ -13,7 +13,7 @@ const AlSyediBadge = () => {
       <img
         src={alSyediLogo}
         alt="Al-Syedi"
-        className="object-contain"
+        className="object-fill"
         style={{
           height: "calc(var(--spacing) * 30)",
           width: "calc(var(--spacing) * 30)",
