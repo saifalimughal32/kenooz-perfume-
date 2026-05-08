@@ -13,7 +13,7 @@ const AlSyediBadge = () => {
       <img
         src={alSyediLogo}
         alt="Al-Syedi"
-        className="h-12 w-12 object-contain"
+        className="h-9 w-9 object-contain"
         loading="lazy"
       />
       <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded bg-foreground text-background text-[11px] tracking-wider uppercase font-medium px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
