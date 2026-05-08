@@ -32,6 +32,7 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
       <Footer />
       <ChatBot />
       <AlSyediBadge />
+      <TilesBadge />
       <ScrollBottle />
     </div>
   );
