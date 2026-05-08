@@ -11,7 +11,7 @@ const Hero = () => (
         alt="Kenooz Extrait de Parfum luxury perfume bottle"
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent pointer-events-none" />
     </div>
 
     <div className="container-luxury relative z-10 min-h-[88vh] pt-28 pb-16 md:py-20 flex items-center">
