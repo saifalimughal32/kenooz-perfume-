@@ -16,7 +16,7 @@ const Hero = () => (
 
     <div className="container-luxury relative z-10 min-h-[88vh] pt-28 pb-16 md:py-20 flex items-center">
       <div className="max-w-xl">
-        <p className="label-gold mt-8 md:mt-12 mb-1 animate-fade-in text-[10px] sm:text-xs">
+        <p className="label-gold mt-8 md:mt-12 mb-1 animate-fade-in text-[10px] sm:text-xs font-bold">
           PREMIUM FRAGRANCE MANUFACTURER
         </p>
 
