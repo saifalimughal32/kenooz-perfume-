@@ -39,11 +39,11 @@ const Hero = () => (
       </div>
 
       {/* Right — bottle image */}
-      <div className="relative hidden lg:block">
+      <div className="relative hidden lg:flex items-center justify-center">
         <img
           src={heroBottle}
           alt="Kenooz Extrait de Parfum luxury perfume bottle"
-          className="w-full h-auto max-h-[640px] object-contain"
+          className="w-[140%] max-w-none h-auto object-contain -mr-32 scale-110"
         />
       </div>
     </div>
