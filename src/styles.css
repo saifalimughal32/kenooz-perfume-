@@ -100,7 +100,7 @@
 }
 
 .dark {
-  --background: 30 10% 6%;
+  --background: 0 0% 1.2%; /* #030303 */
   --foreground: 40 30% 92%;
   --card: 30 10% 8%;
   --card-foreground: 40 30% 92%;
@@ -121,7 +121,7 @@
   --input: 30 8% 14%;
   --ring: 40 55% 55%;
   --gradient-dark: linear-gradient(180deg, hsl(30 10% 6%), hsl(30 10% 4%));
-  --sidebar-background: 30 10% 6%;
+  --sidebar-background: 0 0% 1.2%; /* #030303 */
   --sidebar-foreground: 40 30% 92%;
   --sidebar-primary: 40 55% 55%;
   --sidebar-primary-foreground: 30 15% 8%;
