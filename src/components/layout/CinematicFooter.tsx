@@ -176,7 +176,7 @@ const CinematicFooter = () => {
 
               {/* Trade details */}
               <div className="space-y-2 text-xs text-muted-foreground mb-5">
-                <div className="flex gap-2"><span className="text-primary font-semibold uppercase tracking-wider">Trade License:</span> 1234567</div>
+                <div className="flex gap-2"><span className="text-primary font-semibold uppercase tracking-wider">Trade License:</span> 1051935</div>
                 <div className="flex gap-2"><span className="text-primary font-semibold uppercase tracking-wider">TRN:</span> 100123456700003</div>
               </div>
 
