@@ -44,10 +44,7 @@ const IntroSplash = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40 pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6 pb-16 mt-auto mb-12 sm:mb-20">
-        <h2 className="font-serif text-white text-3xl sm:text-5xl md:text-6xl tracking-wide mb-6 animate-fade-in">
-          KENOOZ PERFUMES
-        </h2>
+      <div className="relative z-10 flex flex-col items-center text-center px-6 pb-16 mt-auto mb-10 sm:mb-16">
         <button
           onClick={handleEnter}
           aria-label="Enter website"
