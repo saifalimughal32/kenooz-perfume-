@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
+import IntroSplash from "@/components/IntroSplash";
 import "./styles.css";
 
 import Index from "@/pages/Index";
