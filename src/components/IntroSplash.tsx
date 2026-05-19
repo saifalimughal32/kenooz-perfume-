@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// Module-level flag — persists across route changes within the same page load.
+// Refreshing the tab resets it (real "visit"), navigation does not.
+let hasShownIntro = false;
 
 const IntroSplash = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(!hasShownIntro);
   const [closing, setClosing] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (!visible) return;
+    hasShownIntro = true;
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
@@ -14,12 +20,30 @@ const IntroSplash = () => {
   }, [visible]);
 
   useEffect(() => {
+    if (!visible) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") handleEnter();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [visible]);
+
+  // Try to start playback as early as possible
+  useEffect(() => {
+    if (!visible) return;
+    const v = videoRef.current;
+    if (!v) return;
+    const tryPlay = () => {
+      v.play().catch(() => {});
+    };
+    tryPlay();
+    v.addEventListener("loadeddata", tryPlay);
+    v.addEventListener("canplay", tryPlay);
+    return () => {
+      v.removeEventListener("loadeddata", tryPlay);
+      v.removeEventListener("canplay", tryPlay);
+    };
+  }, [visible]);
 
   const handleEnter = () => {
     setClosing(true);
@@ -35,11 +59,13 @@ const IntroSplash = () => {
       }`}
     >
       <video
+        ref={videoRef}
         src="/intro.mp4"
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40 pointer-events-none" />
