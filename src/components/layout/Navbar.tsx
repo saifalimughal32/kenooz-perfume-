@@ -66,7 +66,7 @@ const menu: MenuItem[] = [
         title: "Custom Fragrance",
         description: "Bespoke scent development by master perfumers",
         icon: <FlaskConical className="size-5 shrink-0 text-primary" />,
-        url: "/manufacturing",
+        url: "/custom-fragrance",
       },
       {
         title: "Scent Finder",

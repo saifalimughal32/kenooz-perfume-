@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, RotateCcw, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SiteLayout from "@/components/layout/SiteLayout";
 import oudImg from "@/assets/ingredient-oud.jpg";
 import roseImg from "@/assets/ingredient-rose.jpg";
 import lavenderImg from "@/assets/ingredient-lavender.jpg";
@@ -157,7 +158,8 @@ const ScentFinder = () => {
   const progress = done ? 100 : Math.round((step / questions.length) * 100);
 
   return (
-    <main className="bg-background text-foreground min-h-screen">
+    <SiteLayout>
+    <main className="bg-background text-foreground">
       {/* HERO */}
       <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.18),transparent_60%)]" />
@@ -290,6 +292,7 @@ const ScentFinder = () => {
         </div>
       </section>
     </main>
+    </SiteLayout>
   );
 };
 

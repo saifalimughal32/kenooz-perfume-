@@ -13,7 +13,8 @@ import Manufacturing from "@/pages/Manufacturing";
 import PrivateLabel from "@/pages/PrivateLabel";
 import Products from "@/pages/Products";
 import ScentFinder from "@/pages/ScentFinder";
-import { BlogPage } from "@/pages/Stubs";
+import CustomFragrance from "@/pages/CustomFragrance";
+import Blog from "@/pages/Blog";
 import NotFound from "@/pages/NotFound";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -30,8 +31,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/brands" element={<Brands />} />
+            <Route path="/custom-fragrance" element={<CustomFragrance />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/manufacturing" element={<Manufacturing />} />
             <Route path="/private-label" element={<PrivateLabel />} />
