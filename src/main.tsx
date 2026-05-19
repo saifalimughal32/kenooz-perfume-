@@ -25,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         storageKey="kenooz-theme"
         disableTransitionOnChange
       >
+        <IntroSplash />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
