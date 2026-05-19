@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import heroBottle from "@/assets/hero-kenooz-bottle.png";
+import heroBottle from "@/assets/hero-kenooz-new.jpg";
 
 const Hero = () => (
   <section className="relative bg-black text-foreground overflow-hidden">
