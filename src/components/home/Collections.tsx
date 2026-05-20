@@ -22,7 +22,7 @@ const Collections = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {collections.map((c) => (
-          <div key={c.name} className="group bg-secondary border border-border hover:border-primary/50 transition-colors">
+          <div key={c.name} className="group bg-secondary border border-border hover:border-primary/50 transition-colors rounded-[15px] overflow-hidden">
             <div className="relative h-72 overflow-hidden">
               <img src={c.img} loading="lazy" width={800} height={1000} alt={c.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>

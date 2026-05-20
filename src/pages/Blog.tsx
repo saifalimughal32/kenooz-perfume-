@@ -88,7 +88,7 @@ const Blog = () => {
       <section className="py-16 bg-background">
         <div className="container-luxury">
           <article className="grid lg:grid-cols-2 gap-10 items-center group">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden rounded-[15px]">
               <img
                 src={featured.image}
                 alt={featured.title}
@@ -127,7 +127,7 @@ const Blog = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map((p) => (
-              <article key={p.slug} className="bg-background border border-border hover:border-primary transition-colors group flex flex-col">
+              <article key={p.slug} className="bg-background border border-border hover:border-primary transition-colors group flex flex-col rounded-[15px] overflow-hidden">
                 <div className="overflow-hidden aspect-[4/3]">
                   <img src={p.image} loading="lazy" alt={p.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>

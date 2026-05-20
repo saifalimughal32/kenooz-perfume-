@@ -40,9 +40,9 @@ const AboutTeaser = () => (
       </div>
 
       <div className="reveal-right grid grid-cols-2 gap-3">
-        <img src={factory1} loading="lazy" width={1200} height={800} alt="Manufacturing facility" className="col-span-2 h-56 w-full object-cover rounded-2xl" />
-        <img src={factory2} loading="lazy" width={1200} height={800} alt="Perfumers in lab" className="h-44 w-full object-cover rounded-2xl" />
-        <img src={factory3} loading="lazy" width={1200} height={800} alt="Bottling line" className="h-44 w-full object-cover rounded-2xl" />
+        <img src={factory1} loading="lazy" width={1200} height={800} alt="Manufacturing facility" className="col-span-2 h-56 w-full object-cover rounded-[15px]" />
+        <img src={factory2} loading="lazy" width={1200} height={800} alt="Perfumers in lab" className="h-44 w-full object-cover rounded-[12px]" />
+        <img src={factory3} loading="lazy" width={1200} height={800} alt="Bottling line" className="h-44 w-full object-cover rounded-[12px]" />
       </div>
     </div>
   </section>

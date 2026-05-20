@@ -50,7 +50,7 @@ const CustomFragrance = () => {
               </Link>
             </Button>
           </div>
-          <img src={factory2} loading="lazy" alt="Kenooz R&D fragrance laboratory" className="w-full aspect-[4/3] object-cover" />
+          <img src={factory2} loading="lazy" alt="Kenooz R&D fragrance laboratory" className="w-full aspect-[4/3] object-cover rounded-[15px]" />
         </div>
       </section>
 

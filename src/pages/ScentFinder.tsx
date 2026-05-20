@@ -226,7 +226,7 @@ const ScentFinder = () => {
             ) : (
               <div className="animate-fade-in">
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative h-64 md:h-auto min-h-[320px] overflow-hidden">
+                  <div className="relative h-64 md:h-auto min-h-[320px] overflow-hidden rounded-t-[15px] md:rounded-l-[15px] md:rounded-tr-none">
                     <img
                       src={result.image}
                       alt={result.name}

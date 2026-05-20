@@ -42,7 +42,7 @@ const About = () => (
             ))}
           </ul>
         </div>
-        <img src={heroBottle} loading="lazy" width={800} height={600} alt="Kenooz luxury perfume" className="w-full object-cover aspect-[4/3]" />
+        <img src={heroBottle} loading="lazy" width={800} height={600} alt="Kenooz luxury perfume" className="w-full object-cover aspect-[4/3] rounded-[15px]" />
       </div>
     </section>
 

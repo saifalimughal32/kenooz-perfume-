@@ -49,7 +49,7 @@ const Products = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {list.map((p, i) => (
-              <div key={i} className="group bg-[hsl(30_10%_8%)] border border-border hover:border-primary/50 transition-colors">
+              <div key={i} className="group bg-[hsl(30_10%_8%)] border border-border hover:border-primary/50 transition-colors rounded-[15px] overflow-hidden">
                 <div className="h-72 overflow-hidden">
                   <img src={p.img} loading="lazy" width={800} height={1000} alt={p.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>

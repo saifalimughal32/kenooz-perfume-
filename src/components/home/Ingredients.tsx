@@ -211,7 +211,7 @@ const Ingredients = () => {
               type="button"
               onClick={() => setActive(item)}
               aria-label={`View details for ${item.common}`}
-              className="relative w-[200px] h-[280px] md:w-[240px] md:h-[320px] rounded-xl overflow-hidden border border-primary/20 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] group cursor-pointer block p-0 text-left focus:outline-none focus:ring-2 focus:ring-primary/70 transition-transform duration-500 hover:scale-[1.04]"
+              className="relative w-[200px] h-[280px] md:w-[240px] md:h-[320px] rounded-[15px] overflow-hidden border border-primary/20 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] group cursor-pointer block p-0 text-left focus:outline-none focus:ring-2 focus:ring-primary/70 transition-transform duration-500 hover:scale-[1.04]"
             >
               <img
                 src={item.photo.url}
@@ -241,7 +241,7 @@ const Ingredients = () => {
         <DialogContent className="max-w-3xl p-0 overflow-hidden bg-card border-primary/30">
           {active && (
             <div className="grid md:grid-cols-2">
-              <div className="relative h-64 md:h-full min-h-[320px]">
+              <div className="relative h-64 md:h-full min-h-[320px] overflow-hidden rounded-t-[15px] md:rounded-l-[15px] md:rounded-tr-none">
                 <img
                   src={active.photo.url}
                   alt={active.photo.text}

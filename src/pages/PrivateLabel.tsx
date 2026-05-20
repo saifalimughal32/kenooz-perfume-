@@ -109,7 +109,7 @@ const PrivateLabel = () => {
               </Button>
             </div>
           </div>
-          <img src={factory1} loading="lazy" alt="Kenooz manufacturing facility" className="w-full aspect-[4/3] object-cover" />
+          <img src={factory1} loading="lazy" alt="Kenooz manufacturing facility" className="w-full aspect-[4/3] object-cover rounded-[15px]" />
         </div>
       </section>
 

@@ -57,7 +57,7 @@ const IngredientsGlobal = () => {
                     flexBasis: 0,
                     transition: "flex-grow 700ms cubic-bezier(0.22, 1, 0.36, 1)",
                   }}
-                  className="relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/60 min-w-0"
+                  className="relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/60 min-w-0 rounded-[12px]"
                 >
                   <img
                     src={img.src}

@@ -78,7 +78,7 @@ const Manufacturing = () => {
               </Link>
             </Button>
           </div>
-          <img src={factory1} loading="lazy" alt="Kenooz manufacturing facility" className="w-full aspect-[4/3] object-cover" />
+          <img src={factory1} loading="lazy" alt="Kenooz manufacturing facility" className="w-full aspect-[4/3] object-cover rounded-[15px]" />
         </div>
       </section>
 
@@ -109,7 +109,7 @@ const Manufacturing = () => {
               { src: factory3, label: "Filling Line" },
               { src: factory1, label: "Quality Control" },
             ].map((p) => (
-              <div key={p.label} className="relative group overflow-hidden">
+              <div key={p.label} className="relative group overflow-hidden rounded-[15px]">
                 <img src={p.src} loading="lazy" alt={p.label} className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">

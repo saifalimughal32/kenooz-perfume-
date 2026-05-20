@@ -147,7 +147,7 @@ const CircularGallery = React.forwardRef<HTMLDivElement, CircularGalleryProps>(
                   onFocus={() => (isHoveringRef.current = true)}
                   onBlur={() => (isHoveringRef.current = false)}
                   onClick={() => onItemClick?.(item)}
-                  className="relative rounded-xl overflow-hidden border border-primary/20 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] will-change-transform group cursor-pointer block p-0 text-left focus:outline-none focus:ring-2 focus:ring-primary/70"
+                  className="relative rounded-[15px] overflow-hidden border border-primary/20 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] will-change-transform group cursor-pointer block p-0 text-left focus:outline-none focus:ring-2 focus:ring-primary/70"
                   style={{
                     width: `${cardWidth}px`,
                     height: `${cardHeight}px`,
