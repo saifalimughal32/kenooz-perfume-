@@ -53,7 +53,7 @@ const IntroSplash = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] bg-black flex items-start justify-end transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[9999] bg-black flex items-end justify-center px-6 pb-12 transition-opacity duration-500 sm:pb-16 ${
         closing ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -72,7 +72,7 @@ const IntroSplash = () => {
       <button
         onClick={handleEnter}
         aria-label="Enter website"
-        className="relative z-10 mt-10 mr-10 inline-flex h-14 items-center justify-center border border-white/70 bg-black/10 px-10 text-xs font-semibold uppercase tracking-[0.35em] text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-black sm:mr-16 sm:px-12"
+        className="relative z-10 inline-flex h-14 items-center justify-center border border-white/70 bg-black/10 px-10 text-xs font-semibold uppercase tracking-[0.35em] text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-black sm:px-12"
       >
         Enter Website
       </button>
