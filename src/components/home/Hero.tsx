@@ -4,17 +4,11 @@ import heroBottle from "@/assets/hero-kenooz-new.jpg";
 
 const Hero = () => (
   <section className="relative bg-black text-foreground overflow-hidden">
-    {/* Full-bleed background video with image fallback. */}
+    {/* Full-bleed background image */}
     <div className="absolute inset-0">
-      <video
-        src="/intro.mp4"
-        poster={heroBottle}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-label="Kenooz Extrait de Parfum luxury perfume bottle"
+      <img
+        src={heroBottle}
+        alt="Kenooz Extrait de Parfum luxury perfume bottle"
         className="w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent pointer-events-none" />
