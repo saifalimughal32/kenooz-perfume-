@@ -3,11 +3,16 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "packageManager": "npm@10.9.7",
+  "engines": {
+    "node": ">=20 <23"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "deploy:cloudflare": "npm run build && wrangler deploy",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
@@ -85,6 +90,7 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "wrangler": "^4.125.0"
   }
 }

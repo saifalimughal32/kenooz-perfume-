@@ -1,11 +1,27 @@
-import { useEffect, useRef, useState } from "react";
+import heroPoster from "@/assets/hero-kenooz-new.jpg";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 let hasShownIntro = false;
+const VIDEO_LOAD_TIMEOUT_MS = 8_000;
 
 const IntroSplash = () => {
   const [visible, setVisible] = useState(!hasShownIntro);
   const [closing, setClosing] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const closeTimerRef = useRef<number | null>(null);
+
+  const handleEnter = useCallback(() => {
+    if (closing) return;
+    setClosing(true);
+    closeTimerRef.current = window.setTimeout(() => setVisible(false), 600);
+  }, [closing]);
+
+  useEffect(
+    () => () => {
+      if (closeTimerRef.current !== null) window.clearTimeout(closeTimerRef.current);
+    },
+    [],
+  );
 
   useEffect(() => {
     if (!visible) return;
@@ -24,7 +40,7 @@ const IntroSplash = () => {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [visible]);
+  }, [handleEnter, visible]);
 
   useEffect(() => {
     if (!visible) return;
@@ -38,16 +54,18 @@ const IntroSplash = () => {
     tryPlay();
     video.addEventListener("loadeddata", tryPlay);
     video.addEventListener("canplay", tryPlay);
+
+    // Never leave visitors trapped behind the splash on slow or unsupported video connections.
+    const loadTimeout = window.setTimeout(() => {
+      if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) handleEnter();
+    }, VIDEO_LOAD_TIMEOUT_MS);
+
     return () => {
       video.removeEventListener("loadeddata", tryPlay);
       video.removeEventListener("canplay", tryPlay);
+      window.clearTimeout(loadTimeout);
     };
-  }, [visible]);
-
-  const handleEnter = () => {
-    setClosing(true);
-    setTimeout(() => setVisible(false), 600);
-  };
+  }, [handleEnter, visible]);
 
   if (!visible) return null;
 
@@ -60,11 +78,14 @@ const IntroSplash = () => {
       <video
         ref={videoRef}
         src="/intro.mp4"
+        poster={heroPoster}
         autoPlay
         muted
-        loop
         playsInline
-        preload="auto"
+        preload="metadata"
+        onEnded={handleEnter}
+        onError={handleEnter}
+        aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/25 pointer-events-none" />
